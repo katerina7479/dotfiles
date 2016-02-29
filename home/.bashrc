@@ -3,3 +3,6 @@
 # for login shells.  On non-OSX machines this should still have more or less the expected
 # behavior, unless you add some sort of login info echo statements to bash_profile or something.
 [ -n "$PS1" ] && source ~/.bash_profile;
+if [ -f `brew –prefix`/etc/bash_completion.d/docker ]; then
+. `brew –prefix`/etc/bash_completion.d/docker
+fi
